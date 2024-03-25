@@ -1,1 +1,1 @@
-# iWeather
+![Logo](./public/logo.png)
