@@ -1,0 +1,9 @@
+body{
+    font-family: Nunito;
+    margin: 0;
+    padding: 0;
+    background-image: url('/backgroundImg.png');
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+}

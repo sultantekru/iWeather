@@ -1,0 +1,73 @@
+:root {
+    --blue-light: #8FB2F5;
+    --gray-900: #13131A;
+    --gray-800: #16161F;
+    --gray-700: #1C1C27;
+    --gray-600: #22222F;
+    --gray-500: #3B3B54;
+    --gray-400: #7F7F98;
+    --gray-300: #ABABC4;
+    --gray-200: #BFBFD4;
+    --gray-100: #FAFAFA;
+    --white: #FFFFFF;
+}
+
+.heading-hg {
+    font-size: 96px;
+    line-height: 100%;
+    font-weight: 800;
+}
+
+.heading-xl {
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: 800;
+}
+
+.heading-lg {
+    font-size: 32px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.heading-md {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.heading-sm {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.heading-xs {
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.text-lg {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.text-md {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.text-sm {
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.text-xs {
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: 700;
+}
