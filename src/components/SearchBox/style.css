@@ -1,23 +1,54 @@
 @import "../../app/App.css";
 
+
+.search-loading-icon {
+    animation: spin 2s linear infinite;
+    color: var(--blue-light);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    right: 0; /* Sağa hizalama */
+    margin-right: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .search-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin: auto;
-}
-
-#search-input {
+    position: relative;
     width: 100%;
     max-width: 452px;
     height: 56px;
-    color: var(--gray-200);
     padding: 0px 20px 0px 20px;
     border-radius: 8px;
     gap: 0px;
     opacity: 0px;
     background: var(--gray-600);
     border: 1px solid var(--gray-600);
+    margin-bottom: 8px;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 452px;
+    background: var(--gray-600);
+    border: none;
+    outline: none;
+    color: var(--white);
+    margin-top: 2px;
 }
 
 #search-input::placeholder {
@@ -26,23 +57,23 @@
     height: 22px;
     gap: 0px;
     opacity: 0px;
-    font: var(--gray-400);
+    color: var(--gray-400);
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    #search-input {
+    .search-container {
         max-width: 80%;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    #search-input {
+    .search-container {
         max-width: 80%;
     }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    #search-input {
+    .search-container {
         max-width: 65%;
     }
 }
