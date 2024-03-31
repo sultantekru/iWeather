@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { SpinnerGap } from "@phosphor-icons/react";
+import React from 'react'
 import './style.css'
+import { Card } from '../../components/Card';
+import { WeatherDetails } from "../../components/WeatherDetails";
+import { NextDays } from "../../components/NextDays";
+import { Loading } from '../../components/Loading';
 
 export const Home: React.FC = () => {
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 3000);
-        return () => clearTimeout(timer);
-    }, [])
     return (
         <div>
-            {
-                loading && (
-                    <div className='overlay'>
-                        <div className='loading-icon'>
-                            <SpinnerGap size={32} />
-                        </div>
-                    </div>
-                )
-            }
+            <div className='home-container'>
+                <Loading />
+                <Card />
+                <WeatherDetails />
+            </div>
+            <div className='home-container'>
+                <NextDays />
+            </div>
         </div>
     )
 }

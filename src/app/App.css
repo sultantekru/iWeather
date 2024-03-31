@@ -12,6 +12,14 @@
     --white: #FFFFFF;
 }
 
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    align-content: center;
+}
+
 .heading-hg {
     font-size: 96px;
     line-height: 100%;

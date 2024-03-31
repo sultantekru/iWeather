@@ -1,0 +1,81 @@
+.card-container {
+    background-image: url('/Weather=Few Clouds, Moment=Night.png');
+    width: 335px;
+    height: 304px;
+    padding: 12px 0px 0px 0px;
+    gap: 12px;
+    border-radius: 8px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card-image {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    bottom: 0;
+    right: 0;
+}
+
+.location {
+    position: relative;
+    width: 90px;
+    height: 22px;
+    padding-top: 4px;
+    margin-left: 16px;
+    color: var(--gray-100);
+}
+
+.date {
+    position: relative;
+    width: 124px;
+    height: 17px;
+    gap: 0px;
+    color: var(--gray-100);
+    margin-left: 15px;
+    bottom: 12px;
+}
+
+.weather-temperature {
+    position: relative;
+    width: 97px;
+    height: 58px;
+    gap: 0px;
+    opacity: 0px;
+    text-align: left;
+    margin-left: 15px;
+    top: 30px;
+    color: var(--white);
+}
+
+.weather-temperature-details {
+    position: relative;
+    width: 78px;
+    height: 22px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 15px;
+    bottom: 8px;
+    color: var(--white);
+}
+
+.details {
+    position: relative;
+    width: 72px;
+    height: 20px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 15px;
+    bottom: 20px;
+    color: var(--white);
+}
+
+.card-background {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 359px;
+    height: 328px;
+    background-color: var(--gray-800);
+    border-radius: 12px;
+}
