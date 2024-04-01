@@ -22,8 +22,8 @@ export const NextDays: React.FC = () => {
                     <div key={index}>
                         <p className="day heading-xs">{item.day}</p>
                         <div className="next-days-weather">{item.weather}</div>
-                        <p className="temperature-1">32°c</p>
-                        <p className="temperature-2">26°c</p>
+                        <p className="temperature-1 heading-xs">32°c</p>
+                        <p className="temperature-2 heading-xs">26°c</p>
                     </div>
                 </>
             ))}

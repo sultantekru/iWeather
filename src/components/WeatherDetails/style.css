@@ -41,3 +41,11 @@
 .weather-detail-item-value {
     color: var(--gray-200);
 }
+
+@media (max-width: 768px) {
+    .weather-details {
+        margin-left: 0px;
+        margin-top: 8px;
+        
+    }
+}
