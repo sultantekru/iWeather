@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { SearchBox } from '../../components/SearchBox'
 import './style.css'
 import { SearchItem } from '../../components/SearchItem'
+import { OpenWeatherMapService } from '../../data/services/OpenWeatherMapService';
+import { FindResponseDTO } from '../../types/open-weather-map-service/FindResponseDTO';
 
-let list = ["İstanbul", "Ankara", "Ankara"];
+let openWeatherMapService = new OpenWeatherMapService();
 
 export const Location: React.FC = () => {
+    const [loading, setLoading] = useState<boolean>(false);
+    const [searchQuery, setSearchQuery] = useState<string>("");
+    const [data, setData] = useState<FindResponseDTO[]>([]);
+
+    useEffect(() => {
+        if (searchQuery.length !== 0) {
+            setLoading(true);
+            openWeatherMapService.find(searchQuery).then((data: FindResponseDTO[]) => {
+                setData(data);
+            }).finally(() => { setLoading(false); })
+        }
+
+    }, [searchQuery])
+
     return (
         <div className='location-container'>
             <div className="logo">
@@ -17,13 +33,16 @@ export const Location: React.FC = () => {
             <div className="paragraph">
                 <p id='description-paragraph' className='text-sm'>Choose a location to see the weather forecast</p>
             </div>
-            <SearchBox />
+            <SearchBox
+                loading={loading}
+                setSearchQuery={setSearchQuery}
+            />
             {
-                list.map((item, index) =>
+                data.map((item, index) =>
                     <SearchItem
                         key={index}
-                        content={item}
-                        position={list.length == 1 ? "first-one" : (index == 0 ? "first" : (index == list.length - 1 ? "end" : "middle"))}
+                        content={item.name}
+                        position={data.length == 1 ? "first-one" : (index == 0 ? "first" : (index == data.length - 1 ? "end" : "middle"))}
                     />)
             }
         </div>

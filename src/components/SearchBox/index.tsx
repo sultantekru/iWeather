@@ -1,25 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { SpinnerGap } from "@phosphor-icons/react";
 import './style.css'
+import { ISearchBoxProps } from '../../types/ISearchBoxProps';
 
-export const SearchBox: React.FC = () => {
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 10000);
-        return () => clearTimeout(timer);
-    }, [])
+export const SearchBox: React.FC<ISearchBoxProps> = (props) => {
     return (
         <div className='search-container'>
             <input type='text'
                 id='search-input'
                 className='text-md'
                 placeholder='Search location'
+                onChange={(e) => { props.setSearchQuery(e.target.value) }}
             />
             {
-                loading && (
+                props.loading && (
                     <SpinnerGap className='search-loading-icon' size={32} />
                 )
             }
