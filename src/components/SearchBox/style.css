@@ -38,6 +38,7 @@
     background: var(--gray-600);
     border: 1px solid var(--gray-600);
     margin-bottom: 8px;
+    margin-top: 30px;
 }
 
 #search-input {
@@ -62,6 +63,8 @@
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .search-container {
         max-width: 80%;
+        align-items: center;
+        
     }
 }
 
