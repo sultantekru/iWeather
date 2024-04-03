@@ -10,6 +10,7 @@ export const SearchBox: React.FC<ISearchBoxProps> = (props) => {
                 id='search-input'
                 className='text-md'
                 placeholder='Search location'
+                autoComplete="off"
                 onChange={(e) => { props.setSearchQuery(e.target.value) }}
             />
             {

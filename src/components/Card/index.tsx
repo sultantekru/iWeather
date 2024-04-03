@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
-import {FewCloudsNight} from "../../icons/FewCloudsNight"
+import { FewCloudsNight } from "../../icons/FewCloudsNight"
 
 export const Card: React.FC = () => {
+    const [imageIndex, setImageIndex] = useState<number>(1);
+
     return (
         <div className='card-background'>
-            <div className='card-container'>
+            <div className='card-container' style={{ backgroundImage: `url('/card-background/${imageIndex}.png')` }}>
                 <div className="card-image">
-                <FewCloudsNight/>
+                    <FewCloudsNight />
                 </div>
                 <div className="card-location">
                     <p className='location heading-sm'>İstanbul, TR</p>

@@ -1,4 +1,6 @@
+import { FindResponseDTO } from "./FindResponseDTO";
+
 export interface ISearchItemProps {
-    content: string;
+    data: FindResponseDTO;
     position: "first-one" | "first" | "middle" | "end";
 }

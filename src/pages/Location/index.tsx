@@ -41,7 +41,7 @@ export const Location: React.FC = () => {
                 data.map((item, index) =>
                     <SearchItem
                         key={index}
-                        content={item.name}
+                        data={item}
                         position={data.length == 1 ? "first-one" : (index == 0 ? "first" : (index == data.length - 1 ? "end" : "middle"))}
                     />)
             }
