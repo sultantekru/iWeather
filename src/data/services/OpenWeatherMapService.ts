@@ -1,4 +1,4 @@
-import { FindResponseDTO } from "../../types/open-weather-map-service/FindResponseDTO";
+import { FindResponseDTO } from "../../types/FindResponseDTO";
 import { Environment } from "../../utils/Environment";
 import { IOpenWeatherMapService } from "./IOpenWeatherMapService";
 import axios, { AxiosResponse } from 'axios';

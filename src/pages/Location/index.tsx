@@ -3,7 +3,7 @@ import { SearchBox } from '../../components/SearchBox'
 import './style.css'
 import { SearchItem } from '../../components/SearchItem'
 import { OpenWeatherMapService } from '../../data/services/OpenWeatherMapService';
-import { FindResponseDTO } from '../../types/open-weather-map-service/FindResponseDTO';
+import { FindResponseDTO } from '../../types/FindResponseDTO';
 
 let openWeatherMapService = new OpenWeatherMapService();
 

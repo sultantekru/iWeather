@@ -3,6 +3,19 @@
     justify-content: center;
 }
 
+.selected-city {
+    background-color: var(--gray-800);
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: var(--gray-100);
+}
+
+.selected-city:hover {
+    background-color: var(--gray-600);
+}
 
 @media (max-width: 768px) {
     .home-container {
@@ -11,4 +24,3 @@
         align-items: center;
     }
 }
-
