@@ -21,7 +21,6 @@ export const Card: React.FC<ICardProps> = (props) => {
         const currentDate = new Date();
         const formattedDate = currentDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
         setCurrentDate(formattedDate);
-
         const currentHour = new Date().getHours();
         let isDay: boolean = currentHour >= 6 && currentHour < 19;
 

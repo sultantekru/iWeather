@@ -49,8 +49,6 @@ export const Home: React.FC = () => {
                 navigate("/location")
             }
         }
-
-
     }, []);
 
     return (
@@ -79,7 +77,9 @@ export const Home: React.FC = () => {
                             />
                         </div>
                         <div className='home-container'>
-                            <NextDays />
+                            <NextDays
+                                name={locationInfo?.name}
+                            />
                         </div>
                     </>
             }
