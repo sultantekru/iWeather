@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
 
                     setWeatherInfo(data);
                     setLoading(false);
-                }, function (error) {
+                }, function () {
                     navigate("/location")
                 });
             } else {
